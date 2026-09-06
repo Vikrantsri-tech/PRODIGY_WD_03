@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(135deg, #170b3b, #243b91, #0875b9);
+
+    color: white;
+}
+
+.game-container {
+    width: 430px;
+    padding: 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+
+    backdrop-filter: blur(12px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#currentPlayer {
+    font-weight: bold;
+    color: #ffd43b;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+    padding: 15px;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    border-radius: 12px;
+}
+
+.score-board h3 {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.score-board p {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.board {
+    width: 330px;
+    height: 330px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+.cell {
+    border: none;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    font-size: 55px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.cell:hover {
+    transform: scale(1.04);
+
+    background: white;
+}
+
+.cell.x {
+    color: #ff4757;
+}
+
+.cell.o {
+    color: #3742fa;
+}
+
+.cell.winner {
+    background: #ffd43b;
+    color: #111;
+}
+
+#result {
+    height: 35px;
+
+    margin-top: 20px;
+
+    font-size: 22px;
+
+    color: #ffd43b;
+}
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 15px;
+}
+
+.buttons button {
+    padding: 12px 18px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #222;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.buttons button:hover {
+    transform: translateY(-2px);
+
+    background: #ffd43b;
+}
+
+@media (max-width: 500px) {
+
+    .game-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .board {
+        width: 280px;
+        height: 280px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+}
